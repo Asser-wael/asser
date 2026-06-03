@@ -9,7 +9,7 @@ const Main = () => {
   const projects = [
     {
       img: projectI,
-      title: "Landing Page 1",
+      title: "Store",
       subtitle: "Modern store page built with RTK & EXPRESS.",
       category: "css",
       link: "https://moataz-client.vercel.app/",
