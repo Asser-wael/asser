@@ -16,11 +16,15 @@ import './style.css'
 /* 🔹 Layout Component */
 function PortfolioLayout({ children }) {
   return (
-    <>
+    <div className="layout">
       <Header />
-      {children}
+
+      <main>
+        {children}
+      </main>
+
       <Footer />
-    </>
+    </div>
   );
 }
 

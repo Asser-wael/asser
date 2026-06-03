@@ -2,47 +2,55 @@ import { Helmet } from "react-helmet-async";
 import './Services.css';
 const servicesData = [
     {
-        title: 'Web Development',
-        description: 'Modern, responsive websites built with React.',
+        title: "Frontend Development",
+        description:
+            "Building modern and responsive web applications using React, JavaScript, and Tailwind CSS with clean and reusable components.",
     },
     {
-        title: 'UI / UX Design',
-        description: 'Clean, user-friendly interfaces with great UX.',
+        title: "Backend Development",
+        description:
+            "Developing RESTful APIs using Node.js and Express, with authentication, database integration, and secure server-side logic.",
     },
     {
-        title: 'SEO Optimization',
-        description: 'Improve visibility and ranking on search engines.',
+        title: "Full Stack Integration",
+        description:
+            "Connecting frontend and backend systems to build complete and functional web applications with smooth data flow.",
+    },
+    {
+        title: "Performance & Bug Fixing",
+        description:
+            "Optimizing React applications, fixing bugs, improving performance, and enhancing overall user experience.",
     },
 ];
-
 const Services = () => {
     return (
         <>
-         <Helmet>
+            <Helmet>
                 <title>خدماتنا | Asser Wael Portfolio</title>
                 <meta
-                  name="description"
-                  content="تعرف على خدمات Asser Wael: تطوير مواقع حديثة، تصميم واجهات مستخدم وتجربة مستخدم، وتحسين SEO."
+                    name="description"
+                    content="تعرف على خدمات Asser Wael: تطوير مواقع حديثة، تصميم واجهات مستخدم وتجربة مستخدم، وتحسين SEO."
                 />
                 <meta property="og:title" content="خدمات Asser Wael" />
                 <meta property="og:description" content="Web Development, UI/UX Design, SEO Optimization." />
                 <meta property="og:image" content="/services-preview.png" />
             </Helmet>
 
-        <div className="services-container">
-            <h2 className="services-title">Our Services</h2>
+            <div className="services-container">
+                <h2 className="services-title">Our Services</h2>
 
-            <div className="services-grid" >
-                {servicesData.map((service, index) => (
-                    <div className="service-card" key={index} style={{display:"flex" ,flexDirection:"column",justifyContent:"center" ,alignItems:"center"
-                    }}>
-                        <h3>{service.title}</h3>
-                        <p>{service.description}</p>
-                    </div>
-                ))}
+                <div className="services-grid" >
+                    {servicesData.map((service, index) => (
+                        <div className="service-card" key={index} style={{
+                            display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"
+                        }}>
+                            <h3>{service.title}</h3>
+                            <p>{service.description}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-                </>
+        </>
     );
 };
 

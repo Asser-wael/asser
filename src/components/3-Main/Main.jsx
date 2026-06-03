@@ -3,89 +3,19 @@ import { useState } from 'react';
 import { motion } from "framer-motion";
 import { Helmet } from 'react-helmet-async';
 // استيراد جميع الصور من مجلد src
-import imgi from "./download (1).jpg";
-import imgii from "./11f3ac83-7b34-446d-941c-73763a295e82.jpg";
-import imgiii from "./Pin af Benjamin Dreux på Ui Design _ Websitedesign, Hjemmeside.jpg";
-import imgiiii from "./AI and UI design_ A match made in digital heaven.jpg";
-import imgiiiii from "./WebDesign.jpg";
-import imgiiiiii from "./Landing Page_ Fitness trainer homepage.jpg";
-import imgv from "./a56488e4-de71-40af-ad68-ed8111933c3e.jpg";
-import imgvi from "./Single page website developer design.jpg";
+import projectI from "./moataz.png";
 
 const Main = () => {
   const projects = [
     {
-      img: imgi,
+      img: projectI,
       title: "Landing Page 1",
-      subtitle: "Modern landing page built with HTML & CSS.",
+      subtitle: "Modern store page built with RTK & EXPRESS.",
       category: "css",
-      link: "https://example.com/landing1",
-      github: "https://github.com/example/landing1",
+      link: "https://moataz-client.vercel.app/",
+      github: "https://github.com/Asser-wael/moataz_client",
       more: "#"
     },
-    {
-      img: imgii,
-      title: "Portfolio Website",
-      subtitle: "Personal portfolio site to showcase projects and skills.",
-      category: "css",
-      link: "https://example.com/portfolio",
-      github: "https://github.com/example/portfolio",
-      more: "#"
-    },
-    {
-      img: imgiii,
-      title: "E-Commerce Store",
-      subtitle: "React & Node based e-commerce store with Stripe API.",
-      category: "react",
-      link: "https://example.com/store",
-      github: "https://github.com/example/store",
-      more: "#"
-    },
-    {
-      img: imgiiii,
-      title: "Admin Dashboard",
-      subtitle: "Interactive dashboard built with React and Chart.js.",
-      category: "react",
-      link: "https://example.com/dashboard",
-      github: "https://github.com/example/dashboard",
-      more: "#"
-    },
-    {
-      img: imgiiiii,
-      title: "Chat App",
-      subtitle: "Real-time chat app with Node & Socket.io backend.",
-      category: "Node",
-      link: "https://example.com/chatapp",
-      github: "https://github.com/example/chatapp",
-      more: "#"
-    },
-    {
-      img: imgiiiiii,
-      title: "Blog Platform",
-      subtitle: "Full-stack blog with authentication and comments.",
-      category: "Node",
-      link: "https://example.com/blog",
-      github: "https://github.com/example/blog",
-      more: "#"
-    },
-    {
-      img: imgv,
-      title: "Designer Landing Page",
-      subtitle: "Creative landing page for designers and agencies.",
-      category: "java",
-      link: "https://example.com/designer",
-      github: "https://github.com/example/designer",
-      more: "#"
-    },
-    {
-      img: imgvi,
-      title: "Car Landing Page",
-      subtitle: "Sleek landing page showcasing a sports car.",
-      category: "java",
-      link: "https://example.com/car",
-      github: "https://github.com/example/car",
-      more: "#"
-    }
   ];
 
   const [animate] = useState(false);
@@ -123,8 +53,8 @@ const Main = () => {
               <p>{project.subtitle}</p>
               <div className='Git-link-more'>
                 <div>
-                  <a href={project.link}><span className='icon-link'></span></a>
-                  <a href={project.github}><span className='icon-github'></span></a>
+                  <a href={project.link} target="_blank" ><span className='icon-link'></span></a>
+                  <a href={project.github} target="_blank"><span className='icon-github'></span></a>
                 </div>
                 <a href={project.more}><span className='icon-arrow-right'></span></a>
               </div>

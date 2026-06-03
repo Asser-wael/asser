@@ -33,7 +33,21 @@ body {
   background: var(--white);
   color: var(--black);
 }
+html,
+body,
+#root {
+  min-height: 100vh;
+}
 
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
 /* Button */
 .btn {
   background: linear-gradient(135deg, #9F7AEA, #805AD5);

@@ -4,6 +4,12 @@ import Lottie from "lottie-react";
 import animationData from "./ano.json";
 import avatarImg from "./12.png";
 import { Helmet } from "react-helmet-async";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+  FaGithub
+} from "react-icons/fa";
 const Hero = () => {
   return (
     <>
@@ -36,29 +42,55 @@ const Hero = () => {
           </div>
 
           <div className="about">
-            <h1>Software designer, founder, and amateur astronaut</h1>
+            <h1>Full Stack Developer | React & Node.js</h1>
+
             <p>
-              I'm Asser Wael, a Web developer based in Egypt.
-              I build modern, scalable, and beautiful digital experiences.
+              I'm Asser Wael, a full stack web developer based in Egypt.
+              I build modern, responsive, and scalable web applications using React,
+              Redux Toolkit, Tailwind CSS, and Node.js.
+              I focus on clean architecture, performance, and user experience.
+            </p>
+            <hr />
+            <p className="highlight">
+              Available for freelance & remote opportunities
             </p>
           </div>
-
           <div className="icons">
             <a
-              className="icon icon-instagram"
-              href="https://instagram.com/asser_wae1/"
+              href="https://instagram.com/asser_dev/"
               target="_blank"
               rel="noopener noreferrer"
-            />
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
 
-            <a className="icon icon-twitter" href="#" />
+            {/* <a
+              href="https://linkedin.com/in/your-linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a> */}
+
             <a
-              className="icon icon-twitter"
-              href="#"
-              aria-label="Twitter"
-            />
-            <a className="icon icon-linkedin" href="#" aria-label="LinkedIn" />
+              href="https://wa.me/201129691951"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp />
+            </a>
 
+            <a
+              href="https://github.com/Asser-wael"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
           </div>
         </motion.div>
 

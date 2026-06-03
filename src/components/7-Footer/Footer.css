@@ -7,9 +7,6 @@
   border-top: 1px solid var(--border);
   font-size: 0.9rem;
   transition: background-color 0.3s ease, color 0.3s ease;
-  position: fixed;   /* يلزقه تحت الصفحة */
-  bottom: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;     /* عشان يبقى فوق كل المحتوى */
 }
