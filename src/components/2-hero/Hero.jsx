@@ -65,21 +65,13 @@ const Hero = () => {
               <FaInstagram />
             </a>
 
-            {/* <a
-              href="https://linkedin.com/in/your-linkedin"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
-            </a> */}
 
             <a
               href="https://wa.me/201129691951"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
-            >
+              >
               <FaWhatsapp />
             </a>
 
@@ -88,9 +80,17 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-            >
+              >
               <FaGithub />
             </a>
+              {/* <a
+                href="https://linkedin.com/in/your-linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </a> */}
           </div>
         </motion.div>
 
