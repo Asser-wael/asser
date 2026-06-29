@@ -8,7 +8,8 @@ import {
   FaInstagram,
   FaLinkedin,
   FaWhatsapp,
-  FaGithub
+  FaGithub, FaTiktok 
+
 } from "react-icons/fa";
 const Hero = () => {
   return (
@@ -82,6 +83,14 @@ const Hero = () => {
               aria-label="GitHub"
               >
               <FaGithub />
+            </a>
+            <a
+              href="https://www.tiktok.com/@asser_dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Tiktok"
+              >
+              <FaTiktok />
             </a>
               {/* <a
                 href="https://linkedin.com/in/your-linkedin"
