@@ -22,7 +22,7 @@ const projects = [
     title: "Restaurant Management System",
     tag: "Full Stack",
     subtitle:
-      "Complete restaurant management system featuring real-time orders, cashier, kitchen display, admin dashboard and online ordering using Socket.IO.",
+      "Complete restaurant management system featuring real-time orders, cashier, kitchen display, admin dashboard and online...",
     link: "https://restaurant-client-six-self.vercel.app/",
     github: "https://github.com/Asser-wael/restaurant-client",
     more: "#",
