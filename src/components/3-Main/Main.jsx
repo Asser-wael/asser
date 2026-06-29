@@ -4,30 +4,41 @@ import { motion } from "framer-motion";
 import { Helmet } from 'react-helmet-async';
 import projectI from "./moataz.png";
 import projectII from "./food.png";
+import projectIII from "./port.png";
 
 const Main = () => {
-const projects = [
-  {
-    img: projectI,
-    title: "Store",
-    tag: "Full Stack",
-    subtitle:
-      "Modern e-commerce application built with React, Redux Toolkit and Express with authentication and cart management.",
-    link: "https://moataz-client.vercel.app/",
-    github: "https://github.com/Asser-wael/moataz_client",
-    more: "#",
-  },
-  {
-    img: projectII,
-    title: "Restaurant Management System",
-    tag: "Full Stack",
-    subtitle:
-      "Complete restaurant management system featuring real-time orders, cashier, kitchen display, admin dashboard and online...",
-    link: "https://restaurant-client-six-self.vercel.app/",
-    github: "https://github.com/Asser-wael/restaurant-client",
-    more: "#",
-  },
-];
+  const projects = [
+    {
+      img: projectI,
+      title: "Store",
+      tag: "Full Stack",
+      subtitle:
+        "Modern e-commerce application built with React, Redux Toolkit and Express with authentication and cart management.",
+      link: "https://moataz-client.vercel.app/",
+      github: "https://github.com/Asser-wael/moataz_client",
+      more: "#",
+    },
+    {
+      img: projectII,
+      title: "Restaurant Management System",
+      tag: "Full Stack",
+      subtitle:
+        "Complete restaurant management system featuring real-time orders, cashier, kitchen display, admin dashboard and online...",
+      link: "https://restaurant-client-six-self.vercel.app/",
+      github: "https://github.com/Asser-wael/restaurant-client",
+      more: "#",
+    },
+    {
+      img: projectIII,
+      title: "Personal Portfolio",
+      tag: "React",
+      subtitle:
+        "Modern responsive portfolio showcasing my projects, skills, and experience with smooth animations, clean UI, and optimized performance.",
+      link: "https://asser-iota.vercel.app/",
+      github: "https://github.com/Asser-wael/asser",
+      more: "#",
+    },
+  ];
 
 
   const [animate] = useState(false);
@@ -36,7 +47,7 @@ const projects = [
 
   return (
     <>
-     <Helmet>
+      <Helmet>
         <title>المشاريع | Asser Wael Portfolio</title>
         <meta
           name="description"
@@ -48,7 +59,7 @@ const projects = [
       </Helmet>
 
       <main>
-        <div className='r-section'>
+        <div className='r-section '>
           {projects.map((project, index) => (
             <motion.div
               initial={{ opacity: 0, y: 40 }}
