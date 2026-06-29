@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Helmet } from 'react-helmet-async';
 // استيراد جميع الصور من مجلد src
 import projectI from "./moataz.png";
+import projectII from "./food.png";
 
 const Main = () => {
   const projects = [
@@ -16,6 +17,15 @@ const Main = () => {
       github: "https://github.com/Asser-wael/moataz_client",
       more: "#"
     },
+    {
+      img: projectII,
+      title: "Restaurant Management System",
+      subtitle:
+        "A full-stack restaurant management system with real-time orders, cashier, kitchen dashboard, admin panel, and online ordering built using React, Redux Toolkit, Express, MongoDB, and Socket.IO.",
+      link: "https://restaurant-client-six-self.vercel.app/",
+      github: "https://github.com/Asser-wael/restaurant-client",
+      more: "#",
+    }
   ];
 
   const [animate] = useState(false);
@@ -24,7 +34,7 @@ const Main = () => {
 
   return (
     <>
-     <Helmet>
+      <Helmet>
         <title>المشاريع | Asser Wael Portfolio</title>
         <meta
           name="description"
