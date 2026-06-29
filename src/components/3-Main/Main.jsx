@@ -2,8 +2,8 @@ import './Main.css';
 import { useState } from 'react';
 import { motion } from "framer-motion";
 import { Helmet } from 'react-helmet-async';
-// استيراد جميع الصور من مجلد src
 import projectI from "./moataz.png";
+import projectII from "./food.png";
 
 const Main = () => {
 const projects = [
