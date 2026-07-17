@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import projectI from "./moataz.png";
 import projectII from "./food.png";
 import projectIII from "./port.png";
+import projectIIII from "./clothes.png";
 
 const Main = () => {
   const projects = [
@@ -36,6 +37,16 @@ const Main = () => {
         "Modern responsive portfolio showcasing my projects, skills, and experience with smooth animations, clean UI, and optimized performance.",
       link: "https://asser-iota.vercel.app/",
       github: "https://github.com/Asser-wael/asser",
+      more: "#",
+    },
+    {
+      img: projectIIII,
+      title: "Clothes",
+      tag: "Full Stack",
+      subtitle:
+        "Modern full-stack clothing store with a responsive shopping experience, product management, cart functionality, authentication, and an admin dashboard for managing the entire store",
+      link: "https://clothes-client-six.vercel.app/",
+      github: "https://github.com/Asser-wael/clothes-client",
       more: "#",
     },
   ];
