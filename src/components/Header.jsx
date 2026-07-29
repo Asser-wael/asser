@@ -20,37 +20,25 @@ const navLinks = [
 
 
 const Header = () => {
-
     const { mode, toggleMode } = useMode();
-
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-
-
     useEffect(() => {
 
         const onScroll = () => {
             setScrolled(window.scrollY > 20);
         };
-
-
         window.addEventListener(
             "scroll",
             onScroll
         );
-
-
         return () => {
             window.removeEventListener(
                 "scroll",
                 onScroll
             );
         };
-
     }, []);
-
-
-
     return (
 
         <motion.header
@@ -347,7 +335,10 @@ const Header = () => {
                                     navLinks.map((link, index) => (
                                         <motion.a
                                             key={link.href}
+
                                             href={link.href}
+
+                                            
                                             onClick={() =>
                                                 setMenuOpen(false)
                                             }
@@ -363,12 +354,12 @@ const Header = () => {
                                                 delay: index * .1
                                             }}
                                             className="
-                                                text-muted
-                                                hover:text-text
-                                                transition
-                                                font-medium
+                                            text-muted
+                                            hover:text-text
+                                            transition
+                                            font-medium
                                             "
-                                        >
+                                            >
                                             {link.label}
                                         </motion.a>
                                     ))

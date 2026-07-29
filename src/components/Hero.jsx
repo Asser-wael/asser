@@ -2,53 +2,54 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { Helmet } from "react-helmet-async";
 import {
-  FaInstagram,
-  FaWhatsapp,
-  FaGithub,
-  FaTiktok,
+    FaInstagram,
+    FaWhatsapp,
+    FaGithub,
+    FaTiktok,
 } from "react-icons/fa";
 
 import avatarImg from "../assets/images/avatar.png";
 import animationData from "../assets/animations/hero.json";
 
 const socials = [
-  {
-    icon: <FaInstagram />,
-    href: "https://instagram.com/asser_dev/",
-    hover: "hover:text-pink-500",
-  },
-  {
-    icon: <FaWhatsapp />,
-    href: "https://wa.me/201129691951",
-    hover: "hover:text-green-400",
-  },
-  {
-    icon: <FaGithub />,
-    href: "https://github.com/Asser-wael",
-    hover: "hover:text-purple-400",
-  },
-  {
-    icon: <FaTiktok />,
-    href: "https://www.tiktok.com/@asser_dev",
-    hover: "hover:text-cyan-400",
-  },
+    {
+        icon: <FaInstagram />,
+        href: "https://instagram.com/asser_dev/",
+        hover: "hover:text-pink-500",
+    },
+    {
+        icon: <FaWhatsapp />,
+        href: "https://wa.me/201129691951",
+        hover: "hover:text-green-400",
+    },
+    {
+        icon: <FaGithub />,
+        href: "https://github.com/Asser-wael",
+        hover: "hover:text-purple-400",
+    },
+    {
+        icon: <FaTiktok />,
+        href: "https://www.tiktok.com/@asser_dev",
+        hover: "hover:text-cyan-400",
+    },
 ];
 
 
 const Hero = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Asser Wael | Full Stack Developer</title>
-        <meta
-          name="description"
-          content="Asser Wael - Full Stack Developer building modern React and Node.js applications."
-        />
-      </Helmet>
+    return (
+        <>
+            <Helmet>
+                <title>Asser Wael | Full Stack Developer</title>
+                <meta
+                    name="description"
+                    content="Asser Wael - Full Stack Developer building modern React and Node.js applications."
+                />
+            </Helmet>
 
 
-      <motion.section
-        className="
+            <motion.section
+                id="home"
+                className="
           relative
           flex
           items-center
@@ -71,18 +72,17 @@ const Hero = () => {
           to-bg
           backdrop-blur-xl
         "
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                    duration: 0.8,
+                    ease: "easeOut",
+                }}
+            >
 
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.8,
-          ease: "easeOut",
-        }}
-      >
-
-        {/* LEFT */}
-        <motion.div
-          className="
+                {/* LEFT */}
+                <motion.div
+                    className="
             flex-1
             flex
             flex-col
@@ -90,29 +90,29 @@ const Hero = () => {
             min-w-[300px]
           "
 
-          initial={{
-            opacity: 0,
-            x: -40,
-          }}
+                    initial={{
+                        opacity: 0,
+                        x: -40,
+                    }}
 
-          animate={{
-            opacity: 1,
-            x: 0,
-          }}
+                    animate={{
+                        opacity: 1,
+                        x: 0,
+                    }}
 
-          transition={{
-            duration: 0.8,
-            delay: 0.2,
-          }}
-        >
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.2,
+                    }}
+                >
 
 
-          {/* Avatar */}
-          <div>
-            <img
-              src={avatarImg}
-              alt="Asser Wael"
-              className="
+                    {/* Avatar */}
+                    <div>
+                        <img
+                            src={avatarImg}
+                            alt="Asser Wael"
+                            className="
                 w-24
                 h-24
                 rounded-full
@@ -125,125 +125,125 @@ const Hero = () => {
                 transition
                 hover:scale-110
               "
-            />
-          </div>
+                        />
+                    </div>
 
 
-          {/* Text */}
-          <div className="max-w-xl">
+                    {/* Text */}
+                    <div className="max-w-xl">
 
-            <h1
-              className="
+                        <h1
+                            className="
                 text-3xl
                 md:text-4xl
                 font-bold
                 leading-tight
                 text-text
               "
-            >
-              Full Stack Developer 
-              <br />
+                        >
+                            Full Stack Developer
+                            <br />
 
-              <span
-                className="
+                            <span
+                                className="
                   bg-gradient-to-r
                   from-accent
                   to-mint
                   bg-clip-text
                   text-transparent
                 "
-              >
-                React & Node.js
-              </span>
+                            >
+                                React & Node.js
+                            </span>
 
-            </h1>
+                        </h1>
 
 
-            <p
-              className="
+                        <p
+                            className="
                 mt-5
                 text-muted
                 leading-7
                 text-base
               "
-            >
-              I'm Asser Wael, a full stack web developer based in Egypt.
-              I build modern, responsive, and scalable web applications using
-              React, Redux Toolkit, Tailwind CSS, and Node.js.
-              I focus on clean architecture, performance, and user experience.
-            </p>
+                        >
+                            I'm Asser Wael, a full stack web developer based in Egypt.
+                            I build modern, responsive, and scalable web applications using
+                            React, Redux Toolkit, Tailwind CSS, and Node.js.
+                            I focus on clean architecture, performance, and user experience.
+                        </p>
 
 
-            <hr className="my-5 border-border" />
+                        <hr className="my-5 border-border" />
 
 
-            <p
-              className="
+                        <p
+                            className="
                 text-mint
                 font-medium
               "
-            >
-              Available for freelance & remote opportunities
-            </p>
+                        >
+                            Available for freelance & remote opportunities
+                        </p>
 
-          </div>
+                    </div>
 
 
 
-          {/* Socials */}
-          <div
-            className="
+                    {/* Socials */}
+                    <div
+                        className="
               flex
               gap-5
               text-2xl
               text-text
             "
-          >
+                    >
 
-            {socials.map((social,index)=>(
-              <motion.a
+                        {socials.map((social, index) => (
+                            <motion.a
 
-                key={index}
+                                key={index}
 
-                href={social.href}
+                                href={social.href}
 
-                target="_blank"
+                                target="_blank"
 
-                rel="noopener noreferrer"
+                                rel="noopener noreferrer"
 
-                className={`
+                                className={`
                   transition
                   ${social.hover}
                 `}
 
-                whileHover={{
-                  y:-5,
-                  scale:1.15
-                }}
+                                whileHover={{
+                                    y: -5,
+                                    scale: 1.15
+                                }}
 
-                whileTap={{
-                  scale:.9
-                }}
+                                whileTap={{
+                                    scale: .9
+                                }}
 
-              >
-                {social.icon}
+                            >
+                                {social.icon}
 
-              </motion.a>
-            ))}
-
-
-          </div>
+                            </motion.a>
+                        ))}
 
 
-        </motion.div>
+                    </div>
+
+
+                </motion.div>
 
 
 
 
-        {/* RIGHT */}
-        <motion.div
+                {/* RIGHT */}
+                <motion.div
 
-          className="
+                    className="
             flex-1
             flex
             justify-center
@@ -252,37 +252,37 @@ const Hero = () => {
             max-w-md
           "
 
-          initial={{
-            opacity:0,
-            x:40
-          }}
+                    initial={{
+                        opacity: 0,
+                        x: 40
+                    }}
 
-          animate={{
-            opacity:1,
-            x:0
-          }}
+                    animate={{
+                        opacity: 1,
+                        x: 0
+                    }}
 
-          transition={{
-            duration:.8,
-            delay:.4
-          }}
+                    transition={{
+                        duration: .8,
+                        delay: .4
+                    }}
 
-        >
+                >
 
-          <Lottie
-            animationData={animationData}
-            loop
-            className="w-full"
-          />
+                    <Lottie
+                        animationData={animationData}
+                        loop
+                        className="w-full"
+                    />
 
-        </motion.div>
+                </motion.div>
 
 
 
-      </motion.section>
+            </motion.section>
 
-    </>
-  );
+        </>
+    );
 };
 
 
