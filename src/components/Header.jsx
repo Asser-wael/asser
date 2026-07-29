@@ -296,79 +296,68 @@ const Header = () => {
             </div>
             {/* Mobile Menu */}
 
-            <AnimatePresence>
-                {
-                    menuOpen && (
-                        <motion.nav
 
-                            initial={{
-                                height: 0,
-                                opacity: 0
-                            }}
-                            animate={{
-                                height: "auto",
-                                opacity: 1
-                            }}
-                            exit={{
-                                height: 0,
-                                opacity: 0
-                            }}
-                            transition={{
-                                duration: .3
-                            }}
-                            className="
-                                md:hidden
-                                overflow-hidden
-                                bg-bg-elev
-                                border-t
-                                border-border
-                            "
-                        >
-                            <div className="
-                                flex
-                                flex-col
-                                px-6
-                                py-4
-                                gap-4
-                            ">
-                                {
-                                    navLinks.map((link, index) => (
-                                        <motion.a
-                                            key={link.href}
+            <div
+                className={`
+        md:hidden
+        absolute
+        top-full
+        left-0
+        w-full
+        bg-bg-elev
+        border-t
+        border-border
+        transition-all
+        duration-300
+        overflow-hidden
 
-                                            href={link.href}
+        ${menuOpen
+                        ? "max-h-96 opacity-100"
+                        : "max-h-0 opacity-0"
+                    }
+    `}
+            >
 
-                                            
-                                            onClick={() =>
-                                                setMenuOpen(false)
-                                            }
-                                            initial={{
-                                                opacity: 0,
-                                                x: -20
-                                            }}
-                                            animate={{
-                                                opacity: 1,
-                                                x: 0
-                                            }}
-                                            transition={{
-                                                delay: index * .1
-                                            }}
-                                            className="
-                                            text-muted
-                                            hover:text-text
-                                            transition
-                                            font-medium
-                                            "
-                                            >
-                                            {link.label}
-                                        </motion.a>
-                                    ))
+
+                <div
+                    className="
+            flex
+            flex-col
+            gap-5
+            px-6
+            py-5
+        "
+                >
+
+                    {
+                        navLinks.map((link) => (
+
+                            <a
+                                key={link.href}
+                                href={link.href}
+
+                                onClick={() =>
+                                    setMenuOpen(false)
                                 }
-                            </div>
-                        </motion.nav>
-                    )
-                }
-            </AnimatePresence>
+
+                                className="
+                        text-muted
+                        hover:text-text
+                        font-medium
+                    "
+                            >
+                                {link.label}
+
+                            </a>
+
+                        ))
+                    }
+
+
+                </div>
+
+
+            </div>
         </motion.header>
 
     );
