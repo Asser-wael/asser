@@ -1,101 +1,51 @@
-import './App.css';
-import Header from './components/1-Header/Header';
-import Hero from './components/2-hero/Hero';
-import Main from './components/3-Main/Main';
-import Services from './components/4-Services/Services';
-import Skills from './components/5-Skills/Skills';
-import Contact from './components/6-Contact/Contact';
-import Footer from './components/7-Footer/Footer';
-import Error from './components/errorPage';
-import { ModeProvider } from "./context";
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Main from "./components/Main";
+import Services from "./components/Services";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import { ModeProvider } from "./context/ModeContext";
 import { HelmetProvider } from "react-helmet-async";
-import { HashRouter, Routes, Route } from "react-router-dom";
-import './style.css'
-
-/* 🔹 Layout Component */
-function PortfolioLayout({ children }) {
-  return (
-    <div className="layout">
-      <Header />
-
-      <main>
-        {children}
-      </main>
-
-      <Footer />
-    </div>
-  );
-}
-
-/* 🔹 PageTransition Component */
-function PageTransition({ children }) {
-  return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={window.location.hash} // HashRouter
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -20 }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
-  );
-}
+import { FaWhatsapp } from "react-icons/fa";
 
 function App() {
   return (
     <HelmetProvider>
       <ModeProvider>
-        <HashRouter>
-          <PortfolioLayout>
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <PageTransition>
-                    <Hero />
-                  </PageTransition>
-                }
-              />
-              <Route
-                path="/projects"
-                element={
-                  <PageTransition>
-                    <Main />
-                  </PageTransition>
-                }
-              />
-              <Route
-                path="/services"
-                element={
-                  <PageTransition>
-                    <Services />
-                  </PageTransition>
-                }
-              />
-              <Route
-                path="/skills"
-                element={
-                  <PageTransition>
-                    <Skills />
-                  </PageTransition>
-                }
-              />
-              <Route
-                path="/contact"
-                element={
-                  <PageTransition>
-                    <Contact />
-                  </PageTransition>
-                }
-              />
-              <Route path="*" element={<Error />} />
-            </Routes>
-          </PortfolioLayout>
-        </HashRouter>
+        <motion.div className=" scroll-smooth overflow-x-hidden">
+          <Header />
+          <motion.main
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{ duration: 1, delay: .8 }}>
+            <Hero />
+            <Main />
+            <Services />
+            <Skills />
+            <Contact />
+          </motion.main>
+          <Footer />
+
+          {/* زر الواتساب العائم - فيه حلقة بتنبض حواليه عشان تلفت الانتباه */}
+          <motion.a
+            href="https://wa.me/201129691951"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50"
+            aria-label="Chat on WhatsApp"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-40" />
+            <FaWhatsapp size={28} className="relative" />
+          </motion.a>
+        </motion.div>
       </ModeProvider>
     </HelmetProvider>
   );

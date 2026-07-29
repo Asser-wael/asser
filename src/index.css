@@ -1,0 +1,98 @@
+/* 1️⃣ استيراد الخطوط أولاً */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* 2️⃣ استيراد Tailwind v4 */
+@import "tailwindcss";
+
+/* 3️⃣ المتغيرات الخاصة بك (الألوان الأساسية) */
+:root {
+  --bg: #0A0A0F;
+  --bg-elev: #111116;
+  --card: #15151C;
+  --border: #26262F;
+  --text: #F2F2F5;
+  --muted: #8B8D98;
+  --accent: #9F7AEA;
+  --accent-dim: #7C5CD1;
+  --mint: #34D399;
+}
+
+:root.light {
+  --bg: #FAFAF9;
+  --bg-elev: #FFFFFF;
+  --card: #FFFFFF;
+  --border: #E7E7EB;
+  --text: #111114;
+  --muted: #6B6D78;
+  --accent: #8B5CF6;
+  --accent-dim: #7C3AED;
+  --mint: #059669;
+}
+
+/* 4️⃣ هذا الجزء هو الأهم: بيربط متغيرات الألوان بـ Tailwind v4
+   عشان كلاسات زي bg-card / text-muted / border-border / bg-accent
+   تشتغل تلقائي في كل الملفات */
+@theme {
+  --color-bg: var(--bg);
+  --color-bg-elev: var(--bg-elev);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-mint: var(--mint);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 5️⃣ لما تدوس على رابط في المنيو (Projects, Skills..) الصفحة تنزل تحت
+   شوية عشان الهيدر الثابت (fixed) ميغطيش على العنوان */
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+.grid-pattern {
+  background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 90%);
+}
+
+/* 6️⃣ شكل الـ scrollbar بسيط ومتناسق مع الألوان */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-dim);
+  border-radius: 999px;
+}
+
+/* 7️⃣ لون التحديد (لما تظلل نص بالماوس) */
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+main {
+  padding-top: 80px;
+  overflow-x: hidden; /* يمنع أي زحلقة أفقية بسبب الأنيميشن */
+}
+
+/* ضيف السطر ده في آخر index.css */
+@theme {
+  --animate-spin-slow: spin 6s linear infinite;
+}
