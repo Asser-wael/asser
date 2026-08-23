@@ -4,6 +4,7 @@ import project1 from "../assets/images/project1.png";
 import project2 from "../assets/images/project2.png";
 import project3 from "../assets/images/project3.png";
 import project4 from "../assets/images/project4.png";
+import project5 from "../assets/images/project5.png";
 
 const projects = [
     {
@@ -38,6 +39,15 @@ const projects = [
         link: "https://clothes-client-six.vercel.app/",
         github: "https://github.com/Asser-wael/clothes-client",
     },
+    {
+        img: project5,
+        title: "Luxora Store",
+        tag: "Full Stack",
+        subtitle:
+            "A premium full-stack fashion e-commerce experience built with a luxury-focused UI, secure authentication, dynamic product management, cart and checkout workflows, responsive design, and a complete admin dashboard.",
+        link: "https://clothes-client-six.vercel.app/",
+        github: "https://github.com/Asser-wael/clothes-client",
+    },
 ];
 
 const Main = () => {
@@ -63,14 +73,12 @@ const Main = () => {
                         transition={{ duration: 0.4, delay: index * 0.1 }}
                         whileHover={{ y: -8 }}
                     >
-                        {/* الصورة مع تأثير تكبير بسيط عند الـ hover */}
                         <div className="relative overflow-hidden h-48">
                             <img
                                 src={project.img}
                                 alt={project.title}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
-                            {/* تدرج غامق فوق الصورة عشان الكتابة تبان لو حبينا نضيف عنوان فوقها لاحقاً */}
                             <div className="absolute inset-0 bg-gradient-to-t from-bg/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </div>
 

@@ -32,7 +32,6 @@ function App() {
           </motion.main>
           <Footer />
 
-          {/* زر الواتساب العائم - فيه حلقة بتنبض حواليه عشان تلفت الانتباه */}
           <motion.a
             href="https://wa.me/201129691951"
             target="_blank"
