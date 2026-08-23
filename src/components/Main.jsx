@@ -46,7 +46,7 @@ const projects = [
         subtitle:
             "A premium full-stack fashion e-commerce experience built with a luxury-focused UI, secure authentication, dynamic product management, cart and checkout workflows, responsive design, and a complete admin dashboard.",
         link: "https://clothes-client-six.vercel.app/",
-        github: "https://github.com/Asser-wael/clothes-client",
+        github: "https://github.com/Asser-wael/Lux_client",
     },
 ];
 
