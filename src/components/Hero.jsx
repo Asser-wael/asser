@@ -132,30 +132,10 @@ const Hero = () => {
                     {/* Text */}
                     <div className="max-w-xl">
 
-                        <h1
-                            className="
-                text-3xl
-                md:text-4xl
-                font-bold
-                leading-tight
-                text-text
-              "
-                        >
+                        <h1 className="text-3xl md:text-4xl font-bold leading-tight text-text">
                             Full Stack Developer
                             <br />
-
-                            <span
-                                className="
-                  bg-gradient-to-r
-                  from-accent
-                  to-mint
-                  bg-clip-text
-                  text-transparent
-                "
-                            >
-                                React & Node.js
-                            </span>
-
+                            <span className="text-accent">React & Node.js</span>
                         </h1>
 
 

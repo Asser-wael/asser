@@ -1,10 +1,10 @@
-/* 1️⃣ استيراد الخطوط أولاً */
+/* 1️⃣ الخطوط */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-/* 2️⃣ استيراد Tailwind v4 */
+/* 2️⃣ Tailwind v4 */
 @import "tailwindcss";
 
-/* 3️⃣ المتغيرات الخاصة بك (الألوان الأساسية) */
+/* 3️⃣ متغيرات الألوان الأساسية - لون واحد (accent) + عائلة رمادي دافيء واحدة */
 :root {
   --bg: #0A0A0F;
   --bg-elev: #111116;
@@ -12,9 +12,10 @@
   --border: #26262F;
   --text: #F2F2F5;
   --muted: #8B8D98;
-  --accent: #9F7AEA;
+  --accent: #6723F0;
   --accent-dim: #7C5CD1;
   --mint: #34D399;
+  --danger: #F87171;
 }
 
 :root.light {
@@ -24,14 +25,13 @@
   --border: #E7E7EB;
   --text: #111114;
   --muted: #6B6D78;
-  --accent: #8B5CF6;
-  --accent-dim: #7C3AED;
+  --accent: #5B21D6;
+  --accent-dim: #6F3CE4;
   --mint: #059669;
+  --danger: #DC2626;
 }
 
-/* 4️⃣ هذا الجزء هو الأهم: بيربط متغيرات الألوان بـ Tailwind v4
-   عشان كلاسات زي bg-card / text-muted / border-border / bg-accent
-   تشتغل تلقائي في كل الملفات */
+/* 4️⃣ ربط المتغيرات بـ Tailwind v4 */
 @theme {
   --color-bg: var(--bg);
   --color-bg-elev: var(--bg-elev);
@@ -42,6 +42,8 @@
   --color-accent: var(--accent);
   --color-accent-dim: var(--accent-dim);
   --color-mint: var(--mint);
+  --color-danger: var(--danger);
+  --animate-spin-slow: spin 6s linear infinite;
 }
 
 html {
@@ -53,15 +55,23 @@ body {
   background-color: var(--bg);
   color: var(--text);
   margin: 0;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-/* 5️⃣ لما تدوس على رابط في المنيو (Projects, Skills..) الصفحة تنزل تحت
-   شوية عشان الهيدر الثابت (fixed) ميغطيش على العنوان */
+/* مسافة السكرول عشان الهيدر الثابت */
 section[id] {
   scroll-margin-top: 90px;
 }
+#home {
+  scroll-margin-top: 100px;
+}
 
+main {
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+/* نمط شبكي خفيف للخلفية، بلون البوردر نفسه */
 .grid-pattern {
   background-image: linear-gradient(var(--border) 1px, transparent 1px),
                     linear-gradient(90deg, var(--border) 1px, transparent 1px);
@@ -69,7 +79,7 @@ section[id] {
   mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 90%);
 }
 
-/* 6️⃣ شكل الـ scrollbar بسيط ومتناسق مع الألوان */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -81,20 +91,20 @@ section[id] {
   border-radius: 999px;
 }
 
-/* 7️⃣ لون التحديد (لما تظلل نص بالماوس) */
+/* لون التحديد */
 ::selection {
   background: var(--accent);
   color: white;
 }
 
-main {
-  padding-top: 80px;
-  overflow-x: hidden; /* يمنع أي زحلقة أفقية بسبب الأنيميشن */
+/* حالة focus واضحة لكل عنصر تفاعلي، مطلوبة للوصولية */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
-#home {
-  scroll-margin-top: 100px;
-}
-/* ضيف السطر ده في آخر index.css */
-@theme {
-  --animate-spin-slow: spin 6s linear infinite;
+
+/* حدود متسقة على كل الصور والكروت اللي بترجع لها */
+img {
+  -webkit-user-drag: none;
 }

@@ -1,5 +1,11 @@
-import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+    FaGithub,
+    FaExternalLinkAlt,
+    FaTimes,
+} from "react-icons/fa";
+
 import project1 from "../assets/images/project1.png";
 import project2 from "../assets/images/project2.png";
 import project3 from "../assets/images/project3.png";
@@ -9,111 +15,392 @@ import project5 from "../assets/images/project5.png";
 const projects = [
     {
         img: project1,
+        images: [project1],
         title: "Store",
         tag: "Full Stack",
-        subtitle: "Modern e‑commerce with React, Redux Toolkit, Express, authentication, and cart.",
+        subtitle:
+            "Modern e-commerce with React, Redux Toolkit, Express, authentication, and cart.",
         link: "https://moataz-client.vercel.app/",
         github: "https://github.com/Asser-wael/moataz_client",
+        features: [
+            "Cart and checkout with persisted sessions",
+            "JWT authentication with refresh tokens",
+            "Admin dashboard for products and orders",
+        ],
+        team: ["Ahmed Tarek — UI design"],
     },
+
     {
         img: project2,
+        images: [project2],
         title: "Restaurant Management",
         tag: "Full Stack",
-        subtitle: "Real‑time orders, cashier, kitchen display, admin dashboard, and online ordering.",
+        subtitle:
+            "Real-time orders, cashier, kitchen display, admin dashboard, and online ordering.",
         link: "https://restaurant-client-six-self.vercel.app/",
         github: "https://github.com/Asser-wael/restaurant-client",
+        features: [
+            "Live order sync between cashier and kitchen display",
+            "Role-based access for staff and admins",
+            "Daily sales reporting",
+        ],
+        team: ["Nourhan Said — backend"],
     },
+
     {
         img: project3,
+        images: [project3],
         title: "Personal Portfolio",
         tag: "React",
-        subtitle: "Responsive portfolio with smooth animations, clean UI, and optimized performance.",
+        subtitle:
+            "Responsive portfolio with smooth animations, clean UI, and optimized performance.",
         link: "https://asser-iota.vercel.app/",
         github: "https://github.com/Asser-wael/asser",
+        features: [
+            "Component-based sections",
+            "Optimized image loading",
+            "Mobile-first layout",
+        ],
+        team: [],
     },
+
     {
         img: project4,
+        images: [project4],
         title: "Clothes Store",
         tag: "Full Stack",
-        subtitle: "Full‑stack clothing store with product management, cart, authentication, and admin dashboard.",
+        subtitle:
+            "Full-stack clothing store with product management, cart, authentication, and admin dashboard.",
         link: "https://clothes-client-six.vercel.app/",
         github: "https://github.com/Asser-wael/clothes-client",
+        features: [
+            "Size and variant selection",
+            "Order history per user",
+            "Admin product management",
+        ],
+        team: ["Khaled Fathy — QA"],
     },
+
     {
         img: project5,
+        images: [project5],
         title: "Luxora Store",
         tag: "Full Stack",
         subtitle:
-            "A premium full-stack fashion e-commerce experience built with a luxury-focused UI, secure authentication, dynamic product management, cart and checkout workflows, responsive design, and a complete admin dashboard.",
+            "A premium full-stack fashion e-commerce experience with secure authentication, dynamic product management, cart and checkout workflows, and a complete admin dashboard.",
         link: "https://lux-client-one.vercel.app/",
         github: "https://github.com/Asser-wael/Lux_client",
+        features: [
+            "Wishlist and saved addresses",
+            "Stock and inventory tracking",
+            "Full admin dashboard",
+        ],
+        team: ["Rana Samir — project management"],
     },
 ];
 
 const Main = () => {
+    const [selected, setSelected] = useState(null);
+
+    const closeModal = () => {
+        setSelected(null);
+    };
+
     return (
-        <section id="projects" className="py-20 px-6 md:px-20 bg-bg-elev">
-            <div className="text-center mb-16">
-                <span className="text-accent font-semibold text-sm tracking-wide uppercase">Portfolio</span>
-                <h2 className="text-4xl font-bold text-text mt-2">Featured Projects</h2>
-                <p className="text-muted mt-3 max-w-xl mx-auto">
-                    A collection of projects I have worked on, covering both Frontend and Backend
+        <section
+            id="projects"
+            className="py-16 sm:py-20 px-4 sm:px-6 md:px-12 lg:px-20 bg-bg-elev"
+        >
+            {/* =========================
+                Section Header
+            ========================== */}
+            <div className="text-center mb-12 sm:mb-16">
+                <span className="text-accent font-semibold text-xs sm:text-sm tracking-wide uppercase">
+                    Portfolio
+                </span>
+
+                <h2 className="text-3xl sm:text-4xl font-bold text-text mt-2">
+                    Featured Projects
+                </h2>
+
+                <p className="text-muted mt-3 max-w-xl mx-auto text-sm sm:text-base leading-relaxed px-2">
+                    A collection of projects covering both frontend and backend
                     development with complete user experiences.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {projects.map((project, index) => (
+            {/* =========================
+                Projects Grid
+            ========================== */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+                {projects.map((project) => (
                     <motion.div
-                        key={index}
-                        className="group bg-card rounded-2xl overflow-hidden border border-border shadow-lg"
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: index * 0.1 }}
-                        whileHover={{ y: -8 }}
+                        key={project.title}
+                        className="bg-card rounded-2xl overflow-hidden border border-border flex flex-col"
+                        initial={{
+                            opacity: 0,
+                            y: 30,
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                        }}
+                        viewport={{
+                            once: true,
+                            amount: 0.15,
+                        }}
+                        transition={{
+                            duration: 0.4,
+                        }}
+                        whileHover={{
+                            y: -5,
+                        }}
                     >
-                        <div className="relative overflow-hidden h-48">
+                        {/* =========================
+                            Project Image
+                        ========================== */}
+                        <button
+                            type="button"
+                            onClick={() => setSelected(project)}
+                            className="block w-full text-left overflow-hidden"
+                            aria-label={`View details for ${project.title}`}
+                        >
                             <img
                                 src={project.img}
                                 alt={project.title}
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                loading="lazy"
+                                className="w-full h-48 sm:h-52 object-cover transition-transform duration-500 hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-bg/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        </div>
+                        </button>
 
-                        <div className="p-6">
-                            <div className="flex justify-between items-start mb-2">
-                                <h3 className="text-xl font-semibold text-text">{project.title}</h3>
-                                <span className="text-xs font-medium text-accent bg-accent/10 px-2 py-1 rounded-full whitespace-nowrap">
+                        {/* =========================
+                            Project Content
+                        ========================== */}
+                        <div className="p-5 sm:p-6 flex flex-col flex-1">
+                            <div className="flex justify-between items-start gap-3 mb-2">
+                                <h3 className="text-lg sm:text-xl font-semibold text-text">
+                                    {project.title}
+                                </h3>
+
+                                <span className="text-[10px] sm:text-xs font-medium text-accent border border-border px-2 py-1 rounded-full whitespace-nowrap">
                                     {project.tag}
                                 </span>
                             </div>
-                            <p className="text-muted text-sm leading-relaxed">{project.subtitle}</p>
 
-                            <div className="flex gap-3 mt-5">
+                            <p className="text-muted text-sm leading-relaxed flex-1">
+                                {project.subtitle}
+                            </p>
+
+                            {/* =========================
+                                Card Actions
+                            ========================== */}
+                            <div className="flex flex-wrap gap-2 sm:gap-3 mt-5">
+                                <button
+                                    type="button"
+                                    onClick={() => setSelected(project)}
+                                    className="text-sm font-medium px-4 py-2 rounded-lg border border-border text-text hover:border-accent hover:text-accent transition"
+                                >
+                                    Details
+                                </button>
+
                                 <a
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg bg-accent hover:bg-accent-dim text-white transition"
                                 >
-                                    <FaExternalLinkAlt size={12} /> Live
+                                    <FaExternalLinkAlt size={12} />
+                                    Live
                                 </a>
 
                                 <a
                                     href={project.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg border border-border text-text hover:bg-bg-elev transition"
+                                    className="flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg border border-border text-text hover:bg-bg transition"
                                 >
-                                    <FaGithub size={14} /> GitHub
+                                    <FaGithub size={14} />
+                                    GitHub
                                 </a>
                             </div>
                         </div>
                     </motion.div>
                 ))}
             </div>
+
+            {/* =========================
+                Project Modal
+            ========================== */}
+            <AnimatePresence>
+                {selected && (
+                    <motion.div
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-3 sm:p-6"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={closeModal}
+                    >
+                        <motion.div
+                            className="bg-card border border-border rounded-2xl max-w-4xl w-full max-h-[92vh] overflow-y-auto overscroll-contain"
+                            initial={{
+                                opacity: 0,
+                                y: 20,
+                                scale: 0.98,
+                            }}
+                            animate={{
+                                opacity: 1,
+                                y: 0,
+                                scale: 1,
+                            }}
+                            exit={{
+                                opacity: 0,
+                                y: 10,
+                                scale: 0.98,
+                            }}
+                            transition={{
+                                duration: 0.2,
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {/* =========================
+                                Modal Header
+                            ========================== */}
+                            <div className="sticky top-0 bg-card border-b border-border px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex justify-between items-start gap-3 z-10">
+                                <div className="min-w-0">
+                                    <h3 className="text-xl sm:text-2xl font-semibold text-text break-words">
+                                        {selected.title}
+                                    </h3>
+
+                                    <span className="inline-block mt-2 text-xs font-medium text-accent border border-border px-2 py-1 rounded-full">
+                                        {selected.tag}
+                                    </span>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    onClick={closeModal}
+                                    aria-label="Close modal"
+                                    className="shrink-0 w-9 h-9 flex items-center justify-center rounded-lg text-muted hover:text-text hover:bg-bg transition"
+                                >
+                                    <FaTimes size={18} />
+                                </button>
+                            </div>
+
+                            {/* =========================
+                                Modal Content
+                            ========================== */}
+                            <div className="px-4 sm:px-6 lg:px-8 py-6">
+                                {/* Description */}
+                                <p className="text-muted text-sm leading-relaxed mb-8 max-w-2xl">
+                                    {selected.subtitle}
+                                </p>
+
+                                {/* =========================
+                                    Image Gallery
+                                ========================== */}
+                                {selected.images?.length > 0 && (
+                                    <div className="mb-8">
+                                        <h4 className="text-text font-medium text-sm mb-3">
+                                            Screenshots
+                                        </h4>
+
+                                        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3">
+                                            {selected.images.map((src, i) => (
+                                                <div
+                                                    key={`${selected.title}-${i}`}
+                                                    className="overflow-hidden rounded-lg border border-border bg-bg"
+                                                >
+                                                    <img
+                                                        src={src}
+                                                        alt={`${selected.title} screenshot ${
+                                                            i + 1
+                                                        }`}
+                                                        loading="lazy"
+                                                        className="w-full h-40 sm:h-36 object-cover transition-transform duration-300 hover:scale-105"
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* =========================
+                                    Features
+                                ========================== */}
+                                {selected.features?.length > 0 && (
+                                    <div className="mb-8">
+                                        <h4 className="text-text font-medium text-sm mb-3">
+                                            Key features
+                                        </h4>
+
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                            {selected.features.map(
+                                                (feature) => (
+                                                    <div
+                                                        key={feature}
+                                                        className="border-l-2 border-accent bg-bg rounded-r-lg px-4 py-3"
+                                                    >
+                                                        <p className="text-text text-sm leading-relaxed">
+                                                            {feature}
+                                                        </p>
+                                                    </div>
+                                                )
+                                            )}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* =========================
+                                    Team
+                                ========================== */}
+                                {selected.team?.length > 0 && (
+                                    <div className="mb-8">
+                                        <h4 className="text-text font-medium text-sm mb-3">
+                                            Worked on this with
+                                        </h4>
+
+                                        <div className="flex flex-wrap gap-2">
+                                            {selected.team.map((person) => (
+                                                <span
+                                                    key={person}
+                                                    className="text-xs text-muted border border-border rounded-full px-3 py-1.5"
+                                                >
+                                                    {person}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* =========================
+                                    Actions
+                                ========================== */}
+                                <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                                    <a
+                                        href={selected.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center gap-2 text-sm font-medium px-4 py-2.5 rounded-lg bg-accent hover:bg-accent-dim text-white transition"
+                                    >
+                                        <FaExternalLinkAlt size={12} />
+                                        Live Project
+                                    </a>
+
+                                    <a
+                                        href={selected.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center gap-2 text-sm font-medium px-4 py-2.5 rounded-lg border border-border text-text hover:bg-bg transition"
+                                    >
+                                        <FaGithub size={14} />
+                                        GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };
