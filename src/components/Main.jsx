@@ -27,7 +27,7 @@ const projects = [
             "JWT authentication with refresh tokens",
             "Admin dashboard for products and orders",
         ],
-        team: ["Ahmed Tarek — UI design"],
+        team: ["Asser — Full Stack"],
     },
 
     {
@@ -44,7 +44,7 @@ const projects = [
             "Role-based access for staff and admins",
             "Daily sales reporting",
         ],
-        team: ["Nourhan Said — backend"],
+        team: ["Asser — Full Stack"],
     },
 
     {
@@ -61,7 +61,7 @@ const projects = [
             "Optimized image loading",
             "Mobile-first layout",
         ],
-        team: [],
+        team: ["Asser — Full Stack"],
     },
 
     {
@@ -78,7 +78,7 @@ const projects = [
             "Order history per user",
             "Admin product management",
         ],
-        team: ["Khaled Fathy — QA"],
+        team: ["Asser — Full Stack"],
     },
 
     {
@@ -95,7 +95,7 @@ const projects = [
             "Stock and inventory tracking",
             "Full admin dashboard",
         ],
-        team: ["Rana Samir — project management"],
+        team: ["Asser — Full Stack"],
     },
 ];
 
