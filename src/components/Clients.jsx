@@ -5,10 +5,10 @@ import c3 from  "../assets/images/sara.png";
 import c4 from  "../assets/images/sara.png";
 
 const clients = [
-    { avatar: c1, name: "Ahmed Tarek", skill: "UI Design", description: "Handled the visual identity and design system for the Store project." },
-    { avatar: c2, name: "Nourhan Said", skill: "Backend", description: "Built the order and payment service for Restaurant Management." },
-    { avatar: c3, name: "Khaled Fathy", skill: "QA", description: "Led testing and bug tracking across the Clothes Store release." },
-    { avatar: c4, name: "Rana Samir", skill: "Project Management", description: "Coordinated timelines and client feedback for Luxora Store." },
+    { avatar: c1, name: "Fahd Ahmed", skill: "Content Creator", description: "Created engaging content that helped strengthen the brand and connect with its audience." },
+    // { avatar: c2, name: "Nourhan Said", skill: "Backend", description: "Built the order and payment service for Restaurant Management." },
+    // { avatar: c3, name: "Khaled Fathy", skill: "QA", description: "Led testing and bug tracking across the Clothes Store release." },
+    // { avatar: c4, name: "Rana Samir", skill: "Project Management", description: "Coordinated timelines and client feedback for Luxora Store." },
 ];
 
 const Clients = () => {
