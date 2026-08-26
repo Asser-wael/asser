@@ -19,13 +19,15 @@ const projects = [
         title: "Store",
         tag: "Full Stack",
         subtitle:
-            "Modern e-commerce with React, Redux Toolkit, Express, authentication, and cart.",
+            "Modern e-commerce platform with authentication, cart management, real-time updates, and a complete admin dashboard.",
         link: "https://moataz-client.vercel.app/",
         github: "https://github.com/Asser-wael/moataz_client",
         features: [
-            "Cart and checkout with persisted sessions",
-            "JWT authentication with refresh tokens",
-            "Admin dashboard for products and orders",
+            "JWT authentication with email verification and protected routes",
+            "Persistent cart and guest cart management",
+            "Product search, filtering, categories, and detailed product pages",
+            "Order creation, tracking, and status management",
+            "Complete admin dashboard for products, users, and orders",
         ],
         team: ["Asser — Full Stack"],
     },
@@ -36,13 +38,15 @@ const projects = [
         title: "Restaurant Management",
         tag: "Full Stack",
         subtitle:
-            "Real-time orders, cashier, kitchen display, admin dashboard, and online ordering.",
+            "Real-time restaurant management system with online ordering, cashier, kitchen display, and admin dashboard.",
         link: "https://restaurant-client-six-self.vercel.app/",
         github: "https://github.com/Asser-wael/restaurant-client",
         features: [
-            "Live order sync between cashier and kitchen display",
-            "Role-based access for staff and admins",
-            "Daily sales reporting",
+            "Real-time order synchronization using Socket.IO",
+            "Dedicated cashier and kitchen display workflows",
+            "Role-based access control for staff and administrators",
+            "Online ordering with order status tracking",
+            "Sales analytics and daily reporting",
         ],
         team: ["Asser — Full Stack"],
     },
@@ -53,13 +57,15 @@ const projects = [
         title: "Personal Portfolio",
         tag: "React",
         subtitle:
-            "Responsive portfolio with smooth animations, clean UI, and optimized performance.",
+            "Responsive developer portfolio with modern UI, smooth animations, and optimized user experience.",
         link: "https://asser-iota.vercel.app/",
         github: "https://github.com/Asser-wael/asser",
         features: [
-            "Component-based sections",
-            "Optimized image loading",
-            "Mobile-first layout",
+            "Responsive mobile-first design",
+            "Smooth Framer Motion animations and transitions",
+            "Dark and light mode support",
+            "Interactive project showcase and contact sections",
+            "Optimized component-based React architecture",
         ],
         team: ["Asser — Full Stack"],
     },
@@ -70,13 +76,15 @@ const projects = [
         title: "Clothes Store",
         tag: "Full Stack",
         subtitle:
-            "Full-stack clothing store with product management, cart, authentication, and admin dashboard.",
+            "Full-stack fashion e-commerce platform with product variants, cart management, authentication, and admin tools.",
         link: "https://clothes-client-six.vercel.app/",
         github: "https://github.com/Asser-wael/clothes-client",
         features: [
-            "Size and variant selection",
-            "Order history per user",
-            "Admin product management",
+            "Product variants with sizes, prices, offers, colors, and stock",
+            "JWT authentication with protected user and admin routes",
+            "Cart, checkout, order history, and order tracking",
+            "Admin product and order management",
+            "Responsive shopping experience with modern product pages",
         ],
         team: ["Asser — Full Stack"],
     },
@@ -87,13 +95,15 @@ const projects = [
         title: "Luxora Store",
         tag: "Full Stack",
         subtitle:
-            "A premium full-stack fashion e-commerce experience with secure authentication, dynamic product management, cart and checkout workflows, and a complete admin dashboard.",
+            "Premium full-stack fashion e-commerce experience with secure authentication, advanced product management, real-time notifications, and a complete admin dashboard.",
         link: "https://lux-client-one.vercel.app/",
         github: "https://github.com/Asser-wael/Lux_client",
         features: [
-            "Wishlist and saved addresses",
-            "Stock and inventory tracking",
-            "Full admin dashboard",
+            "Advanced product variants with sizes, prices, offers, colors, and inventory",
+            "Cart, checkout, and a professional order history",
+            "Real-time order status updates and browser push notifications",
+            "Admin dashboard with product, order, user, and inventory management",
+            "Secure authentication with JWT, protected routes, and role-based access",
         ],
         team: ["Asser — Full Stack"],
     },
@@ -312,9 +322,8 @@ const Main = () => {
                                                 >
                                                     <img
                                                         src={src}
-                                                        alt={`${selected.title} screenshot ${
-                                                            i + 1
-                                                        }`}
+                                                        alt={`${selected.title} screenshot ${i + 1
+                                                            }`}
                                                         loading="lazy"
                                                         className="w-full h-40 sm:h-36 object-cover transition-transform duration-300 hover:scale-105"
                                                     />

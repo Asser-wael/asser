@@ -1,15 +1,63 @@
 import { motion } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiRedux, SiTailwindcss } from "react-icons/si";
+import { SiOpenai, SiFramer } from "react-icons/si";
 
 const skills = [
-  { icon: <FaHtml5 />, name: "HTML", level: 95, text: "Semantic, accessible markup" },
-  { icon: <FaCss3Alt />, name: "CSS", level: 90, text: "Flexbox, Grid, responsive layouts" },
-  { icon: <FaJs />, name: "JavaScript", level: 85, text: "ES6+, DOM, async" },
-  { icon: <FaReact />, name: "React", level: 90, text: "Hooks, state, components" },
-  { icon: <SiRedux />, name: "Redux Toolkit", level: 85, text: "State management" },
-  { icon: <SiTailwindcss />, name: "Tailwind CSS", level: 80, text: "Utility first styling" },
-  { icon: <FaNodeJs />, name: "Node.js", level: 85, text: "REST APIs, auth, services" },
+    {
+        icon: <FaHtml5 />,
+        name: "HTML",
+        level: 95,
+        text: "Semantic, accessible markup",
+    },
+    {
+        icon: <FaCss3Alt />,
+        name: "CSS",
+        level: 90,
+        text: "Flexbox, Grid, responsive layouts",
+    },
+    {
+        icon: <FaJs />,
+        name: "JavaScript",
+        level: 85,
+        text: "ES6+, DOM, async",
+    },
+    {
+        icon: <FaReact />,
+        name: "React",
+        level: 90,
+        text: "Hooks, state, components",
+    },
+    {
+        icon: <SiRedux />,
+        name: "Redux Toolkit",
+        level: 85,
+        text: "State management",
+    },
+    {
+        icon: <SiTailwindcss />,
+        name: "Tailwind CSS",
+        level: 80,
+        text: "Utility-first styling",
+    },
+    {
+        icon: <FaNodeJs />,
+        name: "Node.js",
+        level: 85,
+        text: "REST APIs, auth, services",
+    },
+    {
+        icon: <SiOpenai />,
+        name: "AI Integration",
+        level: 40,
+        text: "Currently learning AI APIs and automation.....",
+    },
+    {
+        icon: <SiFramer />,
+        name: "Framer Motion",
+        level: 40,
+        text: "Currently learning advanced animations....",
+    },
 ];
 
 const Skills = () => {
