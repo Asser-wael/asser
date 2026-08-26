@@ -12,9 +12,11 @@ import {
 
 const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#projects", label: "Projects" },
     { href: "#services", label: "Services" },
     { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#clients", label: "Clients" },
+    { href: "#testimonials", label: "Testimonials" },
     { href: "#contact", label: "Contact" },
 ];
 
