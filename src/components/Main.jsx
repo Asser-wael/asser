@@ -172,14 +172,14 @@ const Main = () => {
                         <button
                             type="button"
                             onClick={() => setSelected(project)}
-                            className="block w-full text-left overflow-hidden"
+                            className="block w-full text-left overflow-hidden "
                             aria-label={`View details for ${project.title}`}
                         >
                             <img
                                 src={project.img}
                                 alt={project.title}
                                 loading="lazy"
-                                className="w-full h-48 sm:h-52 object-cover transition-transform duration-500 hover:scale-105"
+                                className="w-full sm:h-52 object-cover transition-transform duration-500 hover:scale-105"
                             />
                         </button>
 

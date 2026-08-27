@@ -6,27 +6,31 @@
 
 /* 3️⃣ متغيرات الألوان الأساسية - لون واحد (accent) + عائلة رمادي دافيء واحدة */
 :root {
-  --bg: #0A0A0F;
-  --bg-elev: #111116;
-  --card: #15151C;
-  --border: #26262F;
-  --text: #F2F2F5;
-  --muted: #8B8D98;
-  --accent: #6723F0;
-  --accent-dim: #7C5CD1;
+  --bg: #090B10;
+  --bg-elev: #10141C;
+  --card: #151A23;
+  --border: #252D3A;
+  --text: #F1F5F9;
+  --muted: #8B95A5;
+
+  --accent: #3B82F6;
+  --accent-dim: #60A5FA;
+
   --mint: #34D399;
   --danger: #F87171;
 }
 
 :root.light {
-  --bg: #FAFAF9;
+  --bg: #F8FAFC;
   --bg-elev: #FFFFFF;
   --card: #FFFFFF;
-  --border: #E7E7EB;
-  --text: #111114;
-  --muted: #6B6D78;
-  --accent: #5B21D6;
-  --accent-dim: #6F3CE4;
+  --border: #E2E8F0;
+  --text: #0F172A;
+  --muted: #64748B;
+
+  --accent: #2563EB;
+  --accent-dim: #3B82F6;
+
   --mint: #059669;
   --danger: #DC2626;
 }
