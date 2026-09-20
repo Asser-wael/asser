@@ -96,7 +96,7 @@ const projects = [
         tag: "Full Stack",
         subtitle:
             "Premium full-stack fashion e-commerce experience with secure authentication, advanced product management, real-time notifications, and a complete admin dashboard.",
-        link: "https://lux-client-one.vercel.app/",
+        link: "https://lux.cmcsweb.online/",
         github: "https://github.com/Asser-wael/Lux_client",
         features: [
             "Advanced product variants with sizes, prices, offers, colors, and inventory",
