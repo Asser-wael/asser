@@ -35,10 +35,10 @@ const projects = [
     {
         img: project2,
         images: [project2],
-        title: "Restaurant Management",
+        title: "Demo Restaurant Management",
         tag: "Full Stack",
         subtitle:
-            "Real-time restaurant management system with online ordering, cashier, kitchen display, and admin dashboard.",
+            " Real-time restaurant management system with online ordering, cashier, kitchen display, and admin dashboard.",
         link: "https://demo.cmcsweb.online/",
         github: "https://github.com/Asser-wael/restaurant-client",
         features: [
@@ -73,7 +73,7 @@ const projects = [
     {
         img: project4,
         images: [project4],
-        title: "Clothes Store",
+        title: "Clothes Store not completed yet",
         tag: "Full Stack",
         subtitle:
             "Full-stack fashion e-commerce platform with product variants, cart management, authentication, and admin tools.",
