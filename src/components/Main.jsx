@@ -39,7 +39,7 @@ const projects = [
         tag: "Full Stack",
         subtitle:
             "Real-time restaurant management system with online ordering, cashier, kitchen display, and admin dashboard.",
-        link: "https://restaurant-client-six-self.vercel.app/",
+        link: "https://demo.cmcsweb.online/",
         github: "https://github.com/Asser-wael/restaurant-client",
         features: [
             "Real-time order synchronization using Socket.IO",
