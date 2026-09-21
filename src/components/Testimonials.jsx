@@ -6,7 +6,7 @@ import t3 from "../assets/images/sara.png";
 const testimonials = [
     {
         avatar: t1,
-        name: "Sara Mostafa",
+        name: "Moataz",
         role: "Founder, Store project",
         quote: "Asser rebuilt our checkout flow in under two weeks and cut cart abandonment noticeably. Clear communication throughout.",
     },
