@@ -18,7 +18,7 @@ const testimonials = [
     },
     {
         avatar: t3,
-        name: "Mona Adel",
+        name: "Adel",
         role: "Product lead, Luxora Store",
         quote: "Clean code, easy to hand off to our internal team, and the admin dashboard saved us hours every week.",
     },
