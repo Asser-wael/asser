@@ -73,7 +73,7 @@ const projects = [
     {
         img: project4,
         images: [project4],
-        title: "Clothes Store — In Progress",
+        title: "Clothes Store",
         tag: "Full Stack",
         subtitle:
             "Full-stack fashion e-commerce platform with product variants, cart management, authentication, and admin tools.",
@@ -92,7 +92,7 @@ const projects = [
     {
         img: project5,
         images: [project5],
-        title: "Luxora Store",
+        title: "Luxora Store — In Progress",
         tag: "Full Stack",
         subtitle:
             "Premium full-stack fashion e-commerce experience with secure authentication, advanced product management, real-time notifications, and a complete admin dashboard.",
