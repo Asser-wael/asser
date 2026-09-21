@@ -12,7 +12,7 @@ const testimonials = [
     },
     {
         avatar: t2,
-        name: "Omar Hassan",
+        name: "Omar",
         role: "Owner, Restaurant Management",
         quote: "The kitchen display and order sync worked exactly as we needed from day one. Support after launch was fast.",
     },
